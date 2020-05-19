@@ -1,18 +1,18 @@
 version: "3"
 services:
  reverseproxy:
- build:
- context: .
- image: sorkinl/reverseproxy 
+  build:
+    context: .
+  image: sorkinl/reverseproxy 
  backend_user:
- build:
- context: ./udagram-api-user
- image: sorkinl/udagram-api-user
+  build:
+    context: ./udagram-api-user
+  image: sorkinl/udagram-api-user
  backend_feed:
- build:
- context: ./udagram-api-feed 
- image: sorkinl/udagram-api-feed
+  build:
+    context: ./udagram-api-feed 
+  image: sorkinl/udagram-api-feed
  frontend:
- build:
- context: ./udagram-frontend 
- image: sorkinl/udagram-frontend:local
+  build:
+    context: ./udagram-frontend 
+  image: sorkinl/udagram-frontend:local
